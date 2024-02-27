@@ -29,7 +29,7 @@ async def handle_greetings(update: Update, context: ContextTypes.DEFAULT_TYPE) -
 
 async def handle_syllabus(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     # Replace this with the path to your syllabus image or any image you want to send
-    syllabus_image_path = "Screenshot 2024-02-26 223044.png"
+    syllabus_image_path = "S1.png"
     try:
         with open(syllabus_image_path, "rb") as image:
             await update.message.reply_photo(photo=image)
@@ -64,7 +64,7 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(update.message.text)
 
 def main() -> None:
-    application = Application.builder().token("6371349970:AAF0QqMRzX8dSGUmYWyvga9GY1klPPImdqs").build()
+    application = Application.builder().token("YOUR_BOT TOKEN").build()
 
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("help", help_command))
